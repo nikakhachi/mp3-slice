@@ -6,10 +6,12 @@
 
 MP3 file slicer for browser
 
+<strong>Input</strong> : MP3 File || <strong>Output</strong> : WAV chunks
+
 ## Table of Contents
 
-  - [Installing](#installing)
-  - [Example](#example)
+- [Installing](#installing)
+- [Example](#example)
 
 ## Installing
 
@@ -25,9 +27,7 @@ Using yarn:
 $ yarn add axios
 ```
 
-
 ## Example
-
 
 ```js
 import mp3Slice from "mp3-slice";
