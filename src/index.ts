@@ -1,4 +1,4 @@
-const audioBufferToWav = require("audiobuffer-to-wav");
+import audioBufferToWav = require("audiobuffer-to-wav");
 
 const getDuration = (src: File): Promise<number> =>
   new Promise((res, rej) => {
@@ -19,11 +19,11 @@ const main = async (src: File, chunkDuration: number) => {
 
   const chunks = [];
   for (let i = 0; i < duration / chunkDuration; i++) {
-    //Compute start and end values in secondes
-    let computedStart = (decodedData.length * i * chunkDuration) / decodedData.duration;
-    let computedEnd = (decodedData.length * (i * chunkDuration + chunkDuration)) / decodedData.duration;
+    // Compute start and end values in secondes
+    const computedStart = (decodedData.length * i * chunkDuration) / decodedData.duration;
+    const computedEnd = (decodedData.length * (i * chunkDuration + chunkDuration)) / decodedData.duration;
 
-    //Create a new buffer
+    // Create a new buffer
     const newBuffer = audioContext.createBuffer(
       decodedData.numberOfChannels,
       computedEnd - computedStart,
@@ -32,8 +32,8 @@ const main = async (src: File, chunkDuration: number) => {
 
     // Copy from old buffer to new with the right slice.
     // At this point, the audio has been cut
-    for (let i = 0; i < decodedData.numberOfChannels; i++) {
-      newBuffer.copyToChannel(decodedData.getChannelData(i).slice(computedStart, computedEnd), i);
+    for (let j = 0; j < decodedData.numberOfChannels; j++) {
+      newBuffer.copyToChannel(decodedData.getChannelData(j).slice(computedStart, computedEnd), j);
     }
     const wav = audioBufferToWav(newBuffer);
     const blob = new Blob([wav], { type: "audio/wav" });
