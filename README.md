@@ -29,12 +29,16 @@ $ yarn add axios
 
 ## Example
 
+##### Import
+
 ```js
 import mp3Slice from "mp3-slice";
 ```
 
+##### Slicing mp3 into seconds
+
 ```js
 const mp3File = e.target.files[0];
 const chunkDuration = 5; // seconds
-const chunks = await mp3Slice(mp3File, chunkDuration);
+const chunks = await mp3Slice.sliceIntoSeconds(mp3File, chunkDuration);
 ```
