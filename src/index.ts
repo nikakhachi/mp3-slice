@@ -1,3 +1,7 @@
-import { sliceMp3InChunks } from "./sliceMp3InChunks";
+import { sliceIntoSeconds } from "./sliceIntoSeconds";
 
-export default sliceMp3InChunks;
+const mp3Slice = {
+  sliceIntoSeconds,
+};
+
+export default mp3Slice;
