@@ -42,3 +42,12 @@ const mp3File = e.target.files[0];
 const chunkDuration = 5; // seconds
 const chunks = await mp3Slice.sliceIntoSeconds(mp3File, chunkDuration);
 ```
+
+##### Trimming mp3
+
+```js
+const mp3File = e.target.files[0];
+const trimFrom = 10; // seconds
+const trimTo = 20; // seconds
+const blob = await mp3Slice.trim(mp3File, trimFrom, trimTo);
+```
