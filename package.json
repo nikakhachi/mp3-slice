@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/nikakhachi/mp3-slice#readme",
   "author": "nikakhachi",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "audiobuffer-to-wav": "^1.0.0"
   },
