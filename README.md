@@ -6,4 +6,4 @@
 
 Tool for slicing mp3 audio file in browser
 
-## [Docs](https://nikakhachi.github.io/mp3-slice-docs/)
+## [Docs](https://nikakhachi.github.io/mp3-slice/)
