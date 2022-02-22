@@ -4,9 +4,9 @@
 [![install size](https://packagephobia.now.sh/badge?p=mp3-slice)](https://packagephobia.now.sh/result?p=mp3-slice)
 [![npm downloads](https://img.shields.io/npm/dm/mp3-slice.svg?style=flat-square)](http://npm-stat.com/charts.html?package=mp3-slice)
 
-MP3 file slicer for browser
+Tool for slicing mp3 audio file in browser
 
-<strong>Input</strong> : MP3 File || <strong>Output</strong> : WAV chunks
+<strong>Input</strong> : MP3 File || <strong>Output</strong> : WAV chunk(s)
 
 ## Table of Contents
 
